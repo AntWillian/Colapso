@@ -22,7 +22,7 @@ public class ColetarSanidade : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision){
         if(collision.CompareTag("Player")){
-            Debug.Log("colidiu com player");
+           // Debug.Log("colidiu com player");
             coletarSaniade.sanidadeColetada = true;
             coletarSaniade.animLuzSanidade = true;
             Destroy(gameObject, 0.1f);

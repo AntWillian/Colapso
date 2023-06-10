@@ -7,13 +7,14 @@ public class PlatformMove : MonoBehaviour
     public float moveSpeed = 2f;
     public bool platform1 = false;
     public bool platform2 = false;
-    public bool moveRight = true, moveUp = true;
+    
 
-    private int rightMove = 200;
-    private int leftMove = 200;
+    // variavel de tempo para movimentacao ponte
+    private float timerMove;
+    private float timerMoveUp;
+    public static bool moveRight = false;
+    public bool moveUp = true;
 
-    private int upMove = 200;
-    private int downMove = 200;
     
 
 
@@ -21,17 +22,24 @@ public class PlatformMove : MonoBehaviour
     void Update()
     {
         if(platform1){
-            if(rightMove >= 0){
-                moveRight = false;
-                rightMove -= 1;
-            }else if(leftMove >= 0){
+
+            if( timerMove <= 2 && moveRight){
                 moveRight = true;
-                leftMove -= 1;
+                timerMove = timerMove + Time.deltaTime;
+
+                Debug.Log( "true dddd timerMove=" + timerMove);
             }else{
-                rightMove = 200;
-                leftMove = 200;
+
+                if(timerMove >= 0){
+                    moveRight = false;
+                    timerMove = timerMove - Time.deltaTime;
+                    Debug.Log( "False timerMove=" + timerMove);
+                }else{
+                    moveRight = true;
+                }
+               
             }
-                
+
 
             if(moveRight){
                 transform.Translate(Vector2.right * moveSpeed * Time.deltaTime);
@@ -42,15 +50,22 @@ public class PlatformMove : MonoBehaviour
         }
 
          if(platform2){
-             if(upMove >= 0){
-                moveUp = false;
-                upMove -= 1;
-            }else if(downMove >= 0){
+
+            if( timerMoveUp <= 2 && moveRight){
                 moveUp = true;
-                downMove -= 1;
+                timerMoveUp = timerMoveUp + Time.deltaTime;
+
+                Debug.Log( "true dddd timerMoveUp=" + timerMoveUp);
             }else{
-                upMove = 200;
-                downMove = 200;
+
+                if(timerMoveUp >= 0){
+                    moveUp = false;
+                    timerMoveUp = timerMoveUp - Time.deltaTime;
+                    Debug.Log( "False timerMoveUp=" + timerMoveUp);
+                }else{
+                    moveUp = true;
+                }
+               
             }
                
 

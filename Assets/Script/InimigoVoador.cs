@@ -27,13 +27,13 @@ public class InimigoVoador : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision){
         if(collision.CompareTag("PeixeDescer")){
-            Debug.Log("colidiu com Descer");  
+           // Debug.Log("colidiu com Descer");  
             moveUp = true; 
         }
 
         if(collision.CompareTag("PeixeSubir")){
             moveUp = false;
-            Debug.Log("colidiu com Subir");   
+           // Debug.Log("colidiu com Subir");   
         }
     }
 
