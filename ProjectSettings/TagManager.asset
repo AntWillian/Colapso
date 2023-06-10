@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - platformYellow
+  - platformBlue
+  - platformRed
+  - orbYellow
+  - orbRed
+  - orbBlue
+  - setaUpYellow
+  - setaUpRed
+  - setaUpBlue
+  - platform
+  - brickRed
+  - Luz
+  - Pilha
+  - Hud
+  - Sanidade
+  - Sala0
+  - Spawns
+  - SalaExit
+  - Sala1Enter
+  - Sala2Enter
+  - Sala3Enter
+  - Sala4Enter
+  - Sala5Enter
+  - Sala6Enter
+  - Sala7Enter
+  - Sala8Enter
+  - Sala9Enter
+  - Sala10Enter
+  - LinhaFinal
+  - PeixeSubir
+  - PeixeDescer
+  - CheckPoint
+  - FallDetector
+  - InimigoPeixe
+  - Key
+  - Porta
+  - brickYellow
+  - Porta3
+  - Porta2
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Ground
+  - HUD
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
