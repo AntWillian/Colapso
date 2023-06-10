@@ -27,13 +27,13 @@ public class PlatformMove : MonoBehaviour
                 moveRight = true;
                 timerMove = timerMove + Time.deltaTime;
 
-                Debug.Log( "true dddd timerMove=" + timerMove);
+              //  Debug.Log( "true dddd timerMove=" + timerMove);
             }else{
 
                 if(timerMove >= 0){
                     moveRight = false;
                     timerMove = timerMove - Time.deltaTime;
-                    Debug.Log( "False timerMove=" + timerMove);
+                   // Debug.Log( "False timerMove=" + timerMove);
                 }else{
                     moveRight = true;
                 }
@@ -55,13 +55,13 @@ public class PlatformMove : MonoBehaviour
                 moveUp = true;
                 timerMoveUp = timerMoveUp + Time.deltaTime;
 
-                Debug.Log( "true dddd timerMoveUp=" + timerMoveUp);
+                //Debug.Log( "true dddd timerMoveUp=" + timerMoveUp);
             }else{
 
                 if(timerMoveUp >= 0){
                     moveUp = false;
                     timerMoveUp = timerMoveUp - Time.deltaTime;
-                    Debug.Log( "False timerMoveUp=" + timerMoveUp);
+                   // Debug.Log( "False timerMoveUp=" + timerMoveUp);
                 }else{
                     moveUp = true;
                 }
