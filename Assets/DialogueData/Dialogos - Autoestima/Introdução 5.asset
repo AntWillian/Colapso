@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 668c8ced12e26174b8ff47e364ea435c, type: 3}
-  m_Name: "Introdu\xE7\xE3o"
+  m_Name: "Introdu\xE7\xE3o 5"
   m_EditorClassIdentifier: 
   dialogue:
-  - "Ah, ol\xE1!"
-  - "Nunca te vi por aqui, como voc\xEA se chama?"
+  - Bem... o caminho esta muito escuro, voce pode cair da ponte que leva ate a proxima
+    ilha...
+  - e... cair no abismo... nao e uma coisa boa.
   responses:
-  - responseText: Anny
-    dialogueObject: {fileID: 11400000, guid: 5343ec32bf3c3fa4db7bb08cf7ecb206, type: 2}
+  - responseText: Mas por que esta escuro?
+    dialogueObject: {fileID: 11400000, guid: c7a6d67626ed9dc408aa95dcfe288444, type: 2}

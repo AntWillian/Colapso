@@ -1859,7 +1859,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 9.001458, y: 11.998924}
-  m_EdgeRadius: 0.61
+  m_EdgeRadius: 0.75
 --- !u!61 &26382095
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1873,7 +1873,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -1.393034, y: 15.046882}
+  m_Offset: {x: 0.3016796, y: 10.0276165}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1884,7 +1884,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 32.21867, y: 11.441622}
+  m_Size: {x: 35.608097, y: 21.480152}
   m_EdgeRadius: 0
 --- !u!61 &26382096
 BoxCollider2D:
@@ -1899,7 +1899,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.6828637, y: -3.789589}
+  m_Offset: {x: 2.409511, y: -3.789589}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1910,7 +1910,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 16.430954, y: 40.420822}
+  m_Size: {x: 25.287163, y: 40.420822}
   m_EdgeRadius: 0
 --- !u!1 &35555216
 GameObject:
@@ -10570,7 +10570,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 16.186813, y: 27.362003}
-  m_EdgeRadius: 0.45
+  m_EdgeRadius: 0.75
 --- !u!61 &108057634
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10584,7 +10584,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.6233845, y: -3.1830864}
+  m_Offset: {x: -1.1180115, y: -4.0911417}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -10595,7 +10595,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 21.967278, y: 41.196327}
+  m_Size: {x: 36.018562, y: 48.460785}
   m_EdgeRadius: 0
 --- !u!1 &221782682
 GameObject:
@@ -10608,8 +10608,8 @@ GameObject:
   - component: {fileID: 221782684}
   - component: {fileID: 221782683}
   - component: {fileID: 221782688}
-  - component: {fileID: 221782687}
   - component: {fileID: 221782686}
+  - component: {fileID: 221782687}
   - component: {fileID: 221782685}
   m_Layer: 0
   m_Name: Autoestima
@@ -10697,8 +10697,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e66c614849b12324f93e1836f01c8a02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueObject: {fileID: 0}
-  events: []
+  dialogueObject: {fileID: 11400000, guid: a5f39de2ebed2f744b93b64eb4d69e4c, type: 2}
+  events:
+  - name: Anny
+    onPickedResponse:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 221782686}
+          m_TargetAssemblyTypeName: DialogueActivator, Assembly-CSharp
+          m_MethodName: UpdateDialogueObject
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 11400000, guid: 6d2bfd785955a0146949702840b38eff, type: 2}
+            m_ObjectArgumentAssemblyTypeName: DialogueObject, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &221782686
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10711,7 +10727,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e68b2702dad8c442b7fd8c688c2aee0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueObject: {fileID: 0}
+  dialogueObject: {fileID: 11400000, guid: a5f39de2ebed2f744b93b64eb4d69e4c, type: 2}
 --- !u!61 &221782687
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10737,7 +10753,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 17.786427, y: 28.468779}
-  m_EdgeRadius: 0.32
+  m_EdgeRadius: 0.75
 --- !u!61 &221782688
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10751,7 +10767,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.38502884, y: -3.9778075}
+  m_Offset: {x: -0.9379587, y: -0.99154663}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -10762,7 +10778,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 21.444191, y: 38.38254}
+  m_Size: {x: 30.905458, y: 45.151398}
   m_EdgeRadius: 0
 --- !u!1 &274899264
 GameObject:
@@ -10976,7 +10992,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 15.90609, y: 14.461273}
-  m_EdgeRadius: 0.53
+  m_EdgeRadius: 0.75
 --- !u!61 &389267793
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13891,7 +13907,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e68b2702dad8c442b7fd8c688c2aee0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueObject: {fileID: 11400000, guid: 2531d73218f6dd943b1177bd02cfa67d, type: 2}
+  dialogueObject: {fileID: 11400000, guid: a5f39de2ebed2f744b93b64eb4d69e4c, type: 2}
 --- !u!212 &1244124658
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13987,9 +14003,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e66c614849b12324f93e1836f01c8a02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueObject: {fileID: 11400000, guid: 2531d73218f6dd943b1177bd02cfa67d, type: 2}
+  dialogueObject: {fileID: 11400000, guid: a5f39de2ebed2f744b93b64eb4d69e4c, type: 2}
   events:
-  - name: Yes
+  - name: Anny
     onPickedResponse:
       m_PersistentCalls:
         m_Calls:
@@ -13998,17 +14014,13 @@ MonoBehaviour:
           m_MethodName: UpdateDialogueObject
           m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 11400000, guid: a1d54b6c12ae14543beddbc99ae9bf80, type: 2}
+            m_ObjectArgument: {fileID: 11400000, guid: 6d2bfd785955a0146949702840b38eff, type: 2}
             m_ObjectArgumentAssemblyTypeName: DialogueObject, Assembly-CSharp
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - name: No
-    onPickedResponse:
-      m_PersistentCalls:
-        m_Calls: []
 --- !u!1 &1286397075
 GameObject:
   m_ObjectHideFlags: 0

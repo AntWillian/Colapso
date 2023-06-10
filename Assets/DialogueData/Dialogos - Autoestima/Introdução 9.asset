@@ -10,11 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 668c8ced12e26174b8ff47e364ea435c, type: 3}
-  m_Name: "Introdu\xE7\xE3o"
+  m_Name: "Introdu\xE7\xE3o 9"
   m_EditorClassIdentifier: 
   dialogue:
-  - "Ah, ol\xE1!"
-  - "Nunca te vi por aqui, como voc\xEA se chama?"
+  - Ah....
+  - Talvez um de meus amigos tenha descoberto como consertar o farol...
+  - Nos separamos para tentar achar uma maneira de sair deste lugar, eles podem te
+    ajudar :)
+  - Descubra o que eles aprenderam e talvez todos possam ir para casa!!!
   responses:
-  - responseText: Anny
-    dialogueObject: {fileID: 11400000, guid: 5343ec32bf3c3fa4db7bb08cf7ecb206, type: 2}
+  - responseText: Entendi...
+    dialogueObject: {fileID: 0}

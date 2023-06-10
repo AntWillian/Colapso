@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 668c8ced12e26174b8ff47e364ea435c, type: 3}
-  m_Name: "Introdu\xE7\xE3o"
+  m_Name: "Introdu\xE7\xE3o 7"
   m_EditorClassIdentifier: 
   dialogue:
-  - "Ah, ol\xE1!"
-  - "Nunca te vi por aqui, como voc\xEA se chama?"
+  - "Ele nao esta mais girando... a ilumin\xE7ao parou completamente para este lado
+    e ninguem sabe o motivo..."
+  - Por causa disso.. eu e meus amigos estamos presos nesta ilha... agora voce tambem.
   responses:
-  - responseText: Anny
-    dialogueObject: {fileID: 11400000, guid: 5343ec32bf3c3fa4db7bb08cf7ecb206, type: 2}
+  - responseText: Eu nao posso ficar aqui, tenho muita coisa para fazer
+    dialogueObject: {fileID: 11400000, guid: 9a0ac35942ae9ca4faf2f09041083f73, type: 2}

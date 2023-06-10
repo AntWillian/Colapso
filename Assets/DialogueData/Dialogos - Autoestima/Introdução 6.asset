@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 668c8ced12e26174b8ff47e364ea435c, type: 3}
-  m_Name: "Introdu\xE7\xE3o"
+  m_Name: "Introdu\xE7\xE3o 6"
   m_EditorClassIdentifier: 
   dialogue:
-  - "Ah, ol\xE1!"
-  - "Nunca te vi por aqui, como voc\xEA se chama?"
+  - Algum tempo atras, o farol no centro que ilumina toda a nossa ilha...
+  - parou de funcionar de repente
   responses:
-  - responseText: Anny
-    dialogueObject: {fileID: 11400000, guid: 5343ec32bf3c3fa4db7bb08cf7ecb206, type: 2}
+  - responseText: Como assim parou de funcionar?
+    dialogueObject: {fileID: 11400000, guid: 6c673ca999f2f5840b771065132be2f9, type: 2}

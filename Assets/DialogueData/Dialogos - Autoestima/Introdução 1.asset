@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 668c8ced12e26174b8ff47e364ea435c, type: 3}
+  m_Name: "Introdu\xE7\xE3o 1"
+  m_EditorClassIdentifier: 
+  dialogue:
+  - Prazer em te conhecer, Anny.
+  - "Seja bem vinda a... bem... n\xE3o \xE9 como se este lugar tivesse um nome..."
+  - "Alguns diriam que este lugar, em seu apice, poderia se chamar de DreamLand...
+    mas acho que n\xE3o \xE9 a situa\xE7\xE3o atual."
+  responses:
+  - responseText: Como eu vim parar aqui?
+    dialogueObject: {fileID: 11400000, guid: 41457c4f72750fc4a9858c5f62e1b386, type: 2}

@@ -10,11 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 668c8ced12e26174b8ff47e364ea435c, type: 3}
-  m_Name: "Introdu\xE7\xE3o"
+  m_Name: DefaultAutoEstima
   m_EditorClassIdentifier: 
   dialogue:
-  - "Ah, ol\xE1!"
-  - "Nunca te vi por aqui, como voc\xEA se chama?"
-  responses:
-  - responseText: Anny
-    dialogueObject: {fileID: 11400000, guid: 5343ec32bf3c3fa4db7bb08cf7ecb206, type: 2}
+  - ...
+  - Espero poder voltar para casa logo...
+  responses: []
