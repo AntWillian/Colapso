@@ -43,7 +43,7 @@ public class GameController : MonoBehaviour
 
     public void RestartGameFarol(string lvlName){
         reniciarGameVidas -= 1 ;
-        Debug.Log(reniciarGameVidas + "VIDAS RESTANTES");
+       //(reniciarGameVidas + "VIDAS RESTANTES");
         SceneManager.LoadScene(lvlName);
     }
 
@@ -53,7 +53,7 @@ public class GameController : MonoBehaviour
 
     public void startGame(string lvlName){
         //SceneManager.LoadScene(lvlName);
-        Debug.Log("RERERERERERERREREERREREER");
+       // Debug.Log("RERERERERERERREREERREREER");
         showStartGame.SetActive(false);
     }
 
