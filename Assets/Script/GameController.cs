@@ -21,6 +21,9 @@ public class GameController : MonoBehaviour
     ///// VARIAVEL QUE verifica quantas vezes o player pode reniciar a fase
     public int reniciarGameVidas = 11;
 
+    // ativa todos os spawner de inimigos
+    //public bool ativarAllSpawn = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,6 +41,7 @@ public class GameController : MonoBehaviour
     }
 
     public void RestartGame(string lvlName){
+
         SceneManager.LoadScene(lvlName);
     }
 

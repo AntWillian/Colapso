@@ -93,7 +93,16 @@ public class luzController : MonoBehaviour
                 animLuz = false;
 
             }
-        }            
+        } 
+
+
+        if(usarNovaCarga.cargaTotal <= 0){
+            Debug.Log("Luz acabando");
+            light2D = LuzColisao.GetComponent<Light2D>();
+            light2D.intensity -= 1f;
+            light2D.color =Color.red;
+            light2D.pointLightOuterRadius -= 1f;
+        }         
     
     }
 

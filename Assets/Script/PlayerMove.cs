@@ -70,73 +70,73 @@ public class PlayerMove : MonoBehaviour
         if( collision.gameObject.tag == "Sala0"){
             GameController.instance.gameStart = true;
             salaSpawm.salas[0] = true;
-            Debug.Log(salaSpawm.salas[0] + " Sala 00000000");
+           // Debug.Log(salaSpawm.salas[0] + " Sala 00000000");
 
         } 
 
         // SALA 1
         if( collision.gameObject.tag == "Sala1Enter"){
             salaSpawm.salas[1] = true;
-            Debug.Log(salaSpawm.salas[1] + " Sala 111111");
+          //  Debug.Log(salaSpawm.salas[1] + " Sala 111111");
 
         } 
 
          // SALA 2
         if( collision.gameObject.tag == "Sala2Enter"){
             salaSpawm.salas[2] = true;
-            Debug.Log(salaSpawm.salas[2] + " Sala 222222222");
+           // Debug.Log(salaSpawm.salas[2] + " Sala 222222222");
         } 
 
          // SALA 3
         if( collision.gameObject.tag == "Sala3Enter"){
             salaSpawm.salas[3] = true;
-            Debug.Log(salaSpawm.salas[3] + " Sala 3333333333");
+           // Debug.Log(salaSpawm.salas[3] + " Sala 3333333333");
 
         } 
 
          // SALA 4
         if( collision.gameObject.tag == "Sala4Enter"){          
             salaSpawm.salas[4] = true;
-            Debug.Log(salaSpawm.salas[4] + " Sala 444444444");
+           // Debug.Log(salaSpawm.salas[4] + " Sala 444444444");
 
         } 
 
          // SALA 5
         if( collision.gameObject.tag == "Sala5Enter"){
             salaSpawm.salas[5] = true;
-            Debug.Log(salaSpawm.salas[5] + " Sala 555555555");
+           // Debug.Log(salaSpawm.salas[5] + " Sala 555555555");
 
         } 
 
          // SALA 6
         if(collision.gameObject.tag == "Sala6Enter"){
             salaSpawm.salas[6] = true;
-            Debug.Log(salaSpawm.salas[6] + " Sala 666666666666");
+           // Debug.Log(salaSpawm.salas[6] + " Sala 666666666666");
 
         } 
 
          // SALA 7
         if(collision.gameObject.tag == "Sala7Enter"){
             salaSpawm.salas[7] = true;
-            Debug.Log(salaSpawm.salas[7] + " Sala 777777777");
+           // Debug.Log(salaSpawm.salas[7] + " Sala 777777777");
         } 
 
          // SALA 8
         if(collision.gameObject.tag == "Sala8Enter"){ 
             salaSpawm.salas[8] = true;
-            Debug.Log(salaSpawm.salas[8] + " Sala 888888888");
+          //  Debug.Log(salaSpawm.salas[8] + " Sala 888888888");
         } 
 
          // SALA 9
         if(collision.gameObject.tag == "Sala9Enter"){
             salaSpawm.salas[9] = true;
-            Debug.Log(salaSpawm.salas[9] + " Sala 9999999999");
+           // Debug.Log(salaSpawm.salas[9] + " Sala 9999999999");
         } 
 
          // SALA 10
         if(collision.gameObject.tag == "Sala10Enter"){
             salaSpawm.salas[10] = true;
-            Debug.Log(salaSpawm.salas[10] + " Sala 10000000000000");
+           // Debug.Log(salaSpawm.salas[10] + " Sala 10000000000000");
         }
 
          

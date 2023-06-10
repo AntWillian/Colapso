@@ -103,6 +103,9 @@ MonoBehaviour:
   voar: 1
   moveRight: 1
   moveUp: 1
+  rotationCenter: {fileID: 6698999272200389539}
+  rotationRadius: 2
+  angularSpeed: 2
 --- !u!50 &6698999272200389549
 Rigidbody2D:
   serializedVersion: 4

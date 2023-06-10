@@ -7,23 +7,31 @@ public class PlatformMove : MonoBehaviour
     public float moveSpeed = 2f;
     public bool platform1 = false;
     public bool platform2 = false;
+
+    public float timerMovePlatform;
     
 
     // variavel de tempo para movimentacao ponte
     private float timerMove;
     private float timerMoveUp;
-    public static bool moveRight = false;
-    public bool moveUp = true;
+    public bool moveRight = false;
+    public bool moveUp = false;
 
-    
+    void Start()
+    {
+        timerMove = 0f;
+
+        timerMovePlatform = timerMovePlatform;
+
+        Debug.Log( "STARTTTTT timerMove=" + timerMove);
+        Debug.Log( "STARTTTTT timerMovePlatform=" + timerMovePlatform);
+    }
 
 
     // Update is called once per frame
-    void Update()
-    {
-        if(platform1){
-
-            if( timerMove <= 2 && moveRight){
+    void Update(){
+       
+            if(timerMove <= timerMovePlatform && moveRight){
                 moveRight = true;
                 timerMove = timerMove + Time.deltaTime;
 
@@ -35,50 +43,31 @@ public class PlatformMove : MonoBehaviour
                     timerMove = timerMove - Time.deltaTime;
                    // Debug.Log( "False timerMove=" + timerMove);
                 }else{
+                    timerMove = 0;
                     moveRight = true;
                 }
                
             }
 
+          
 
-            if(moveRight){
-                transform.Translate(Vector2.right * moveSpeed * Time.deltaTime);
-            }else{
-                transform.Translate(Vector2.right * -moveSpeed * Time.deltaTime);
+            if(platform1){
 
-            }
-        }
-
-         if(platform2){
-
-            if( timerMoveUp <= 2 && moveRight){
-                moveUp = true;
-                timerMoveUp = timerMoveUp + Time.deltaTime;
-
-                //Debug.Log( "true dddd timerMoveUp=" + timerMoveUp);
-            }else{
-
-                if(timerMoveUp >= 0){
-                    moveUp = false;
-                    timerMoveUp = timerMoveUp - Time.deltaTime;
-                   // Debug.Log( "False timerMoveUp=" + timerMoveUp);
+                if(moveRight){
+                    transform.Translate(Vector2.right * moveSpeed * Time.deltaTime);
                 }else{
-                    moveUp = true;
+                    transform.Translate(Vector2.right * -moveSpeed * Time.deltaTime);
                 }
-               
-            }
-               
 
-            if(moveUp){
-                transform.Translate(Vector2.up * moveSpeed * Time.deltaTime);
-            }else{
-                transform.Translate(Vector2.up * -moveSpeed * Time.deltaTime);
+            }else if(platform2){
 
+                if(moveRight){
+                    transform.Translate(Vector2.up * moveSpeed * Time.deltaTime);
+                }else{
+                    transform.Translate(Vector2.up * -moveSpeed * Time.deltaTime);
+                }
+                
             }
         }
-    }
-
-    
-
-   
 }
+

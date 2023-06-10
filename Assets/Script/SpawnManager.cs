@@ -31,12 +31,8 @@ public class SpawnManager : MonoBehaviour
 
         if(GameController.instance.playerIsAlive){
             //verificando qual sala o player esta
-            for (int i = 0; i < salas.Length; i++) 
-            {
-                if(salas[i]){
-                    Debug.Log("Sala "+ i);
-                }          
-            }
+
+       
 
             if(salas[0]){
                 int index = Random.Range(0, spawnPointsSala0.Length);

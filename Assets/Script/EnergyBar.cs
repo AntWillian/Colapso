@@ -20,8 +20,9 @@ public class EnergyBar : MonoBehaviour
     public int totalSanidade;
 
     // tempo para a sanidade cair um ponto
-    private int tempoUnidadeSanidade = 2000;
-    private int tempoTotalSanidade = 2000;
+
+    private float tempoUnidadeSanidade = 8;
+    private float tempoTotalSanidade = 8;
 
     // sinaliza que uma particula de sanidade foi coletada
     public bool sanidadeColetada = false;
@@ -37,8 +38,7 @@ public class EnergyBar : MonoBehaviour
 
     // ############### BATERIAS ########################
 
-    // TEMPO para gastar uma unidade da bateria
-    private int tempoTotalbateria = 800;
+   
     public int cargaDeBateria;
 
 
@@ -55,9 +55,10 @@ public class EnergyBar : MonoBehaviour
     private int contLuzAnin = 10;
     public bool animLuz = false;
 
-    // tempo de uso de uma bateria
-    private int tempoUnidadeBateria = 800;
-    private int tempoUnidadeBateriaPoder = 800 ;
+    // TEMPO para gastar uma unidade da bateria
+    private float tempoTotalbateria = 5;
+    private float tempoUnidadeBateria = 5;
+    private float tempoUnidadeBateriaPoder = 5 ;
 
     // sinaliza que uma bateria foi usada
     public bool novaCarga = false;
@@ -148,7 +149,7 @@ public class EnergyBar : MonoBehaviour
                         tempoUnidadeSanidade = tempoTotalSanidade;
 
                     }else{
-                        tempoUnidadeSanidade -= 1;
+                        tempoUnidadeSanidade -= Time.deltaTime;
                     }
                 }else{
                     GameController.instance.playerIsAlive = false;
@@ -226,19 +227,20 @@ public class EnergyBar : MonoBehaviour
                             tempoUnidadeBateria = tempoTotalbateria;
 
                         }else{
-                            tempoUnidadeBateria -= 1;
+                            tempoUnidadeBateria -= Time.deltaTime;
                         }
                     }else{
                     //  Debug.Log("Fim da carga");
                     }
                 }else{
+                    Debug.Log("HERERERERERER");
                     if(cargaTotal > 0){
                         if(tempoUnidadeBateriaPoder <= 0 ){
                             cargaTotal -= 1;
                             bateriaCarga.sprite = bateria[cargaTotal ];
                             tempoUnidadeBateriaPoder = (tempoTotalbateria/2);
                         }else{
-                            tempoUnidadeBateriaPoder -= 1;
+                            tempoUnidadeBateriaPoder -= Time.deltaTime;
                         }
                     }else{
                         Debug.Log("Fim da carga usando x2 eeeeeeeeeeee");
