@@ -6,21 +6,30 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Farol/FaseFarolLevel1.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/MenuPrincipal.unity
+    guid: 3cabf64c5ce721941bff5c30e53c3788
+  - enabled: 1
+    path: Assets/Scenes/MapaPrincipal1.unity
+    guid: ff8854cb0fe9acf4b938e02b987c6959
+  - enabled: 1
+    path: Assets/Scenes/faseSchool.unity
+    guid: 85cfb885f9da5024680876dc6c9059c1
   - enabled: 1
     path: Assets/Scenes/FasePonte.unity
     guid: 010433d9de20fc34a8bc308f30097302
+  - enabled: 1
+    path: Assets/Scenes/Farol/FaseFarolLevel1.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/Farol/FaseFarolLevel2.unity
     guid: a9d765ed49644e24b91e12aca2bbb434
   - enabled: 1
     path: Assets/Scenes/Farol/FaseFarolLevel3.unity
     guid: db571041971c0b348b55d15e5584682a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Farol/FaseFarolLevel4.unity
     guid: 8c38a8ed0588dbb4cbaee5ba599cf9b0
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Farol/FaseFarolLevel5.unity
     guid: 428ef96ad5c231b47922e0985e35e65c
   m_configObjects: {}
