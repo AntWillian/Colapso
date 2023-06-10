@@ -17,4 +17,5 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
         Debug.Log("Vai Fechar");
     }
+
 }
