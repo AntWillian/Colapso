@@ -15084,7 +15084,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOver: {fileID: 0}
-  showStartGame: {fileID: 0}
+  showStartGame: {fileID: 1202341170}
   telaFim: {fileID: 0}
   gameStart: 0
   playerIsAlive: 1
