@@ -19,7 +19,7 @@ public class PlatformMove : MonoBehaviour
 
     void Start()
     {
-        timerMove = 0f;
+        timerMove = 3f;
 
         timerMovePlatform = timerMovePlatform;
 

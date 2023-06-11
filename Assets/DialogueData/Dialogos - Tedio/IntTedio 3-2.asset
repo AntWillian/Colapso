@@ -15,7 +15,7 @@ MonoBehaviour:
   dialogue:
   - Aquela coisa velha?
   - De alguma forma quando estavamos aqui, ele parou de rotacionar.
-  - Este lado ficou completamente escuro, mesmo com a laterna que a Vai trouxe, nao
+  - Este lado ficou completamente escuro, mesmo com a laterna que a Val trouxe, nao
     conseguimos passar.
   responses:
   - responseText: O que tem para este lado?

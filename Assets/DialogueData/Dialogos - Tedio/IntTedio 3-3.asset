@@ -15,7 +15,7 @@ MonoBehaviour:
   dialogue:
   - Para ca esta o caminho que leva para a Ilha central.
   - Mas com o farol sem rotacionar, este lado ficou no completo breu, mesmo com a
-    laterna que a Vai trouxe, nao conseguimos passar.
+    laterna que a Val trouxe, nao conseguimos passar.
   responses:
   - responseText: Val?
     dialogueObject: {fileID: 11400000, guid: 218d2bad646c8174b84567b83a57a9ac, type: 2}
