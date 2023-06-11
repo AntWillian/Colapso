@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 668c8ced12e26174b8ff47e364ea435c, type: 3}
+  m_Name: IntTedio 3
+  m_EditorClassIdentifier: 
+  dialogue:
+  - O que foi?
+  - Voce parece que tem algo a perguntar.
+  responses:
+  - responseText: Sobre o farol
+    dialogueObject: {fileID: 11400000, guid: 0116b41b9e3c1b946b4b28212d947520, type: 2}
+  - responseText: O que tem pra esse lado?
+    dialogueObject: {fileID: 11400000, guid: 50c9167e36c51f54cb101ccfff23d0bc, type: 2}

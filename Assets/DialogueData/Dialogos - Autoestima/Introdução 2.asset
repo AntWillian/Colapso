@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: "Introdu\xE7\xE3o 2"
   m_EditorClassIdentifier: 
   dialogue:
-  - "Nao sei te dizer como voc\xEA chegou aqui, na verdade, essa \xE9 a minha d\xFAvida."
+  - Nao sei te dizer como voce chegou aqui, na verdade, essa e a minha duvida.
   - "A ultima vez que alguem novo chegou foi... hm... n\xE3o me lembro direito...
     mas ja tem alguns anos."
-  - "Desde aquele dia, as coisas n\xE3o tem sido as mesmas..."
+  - Desde aquele dia, as coisas nao tem sido as mesmas...
   responses:
   - responseText: Outra pessoa veio parar aqui?
     dialogueObject: {fileID: 11400000, guid: 88185e235743b104bbf0b7cade873a4a, type: 2}

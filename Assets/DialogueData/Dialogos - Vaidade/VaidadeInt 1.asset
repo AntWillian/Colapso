@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 668c8ced12e26174b8ff47e364ea435c, type: 3}
+  m_Name: VaidadeInt 1
+  m_EditorClassIdentifier: 
+  dialogue:
+  - Que estranho...
+  - "Com a falta de ilumina\xE7ao nao deveria ser possivel chegar ate essa ilha abandonada."
+  - De onde voce surgiu?
+  responses:
+  - responseText: Eu.. nao sei, apenas acordei e ja estava nessa ilha
+    dialogueObject: {fileID: 11400000, guid: 9c108ccd174c094448fb500b72c6ef38, type: 2}
