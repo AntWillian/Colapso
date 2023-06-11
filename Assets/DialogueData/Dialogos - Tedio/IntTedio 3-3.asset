@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 668c8ced12e26174b8ff47e364ea435c, type: 3}
-  m_Name: "Introdu\xE7\xE3o 4"
+  m_Name: IntTedio 3-3
   m_EditorClassIdentifier: 
   dialogue:
-  - Claro!!!
-  - "... na verdade... nao sei se voc\xEA conseguira chegar at\xE9 l\xE1..."
+  - Para ca esta o caminho que leva para a Ilha central.
+  - Mas com o farol sem rotacionar, este lado ficou no completo breu, mesmo com a
+    laterna que a Vai trouxe, nao conseguimos passar.
   responses:
-  - responseText: Por que?
-    dialogueObject: {fileID: 11400000, guid: a300af31afcda474593a6cce0b332c96, type: 2}
+  - responseText: Val?
+    dialogueObject: {fileID: 11400000, guid: 218d2bad646c8174b84567b83a57a9ac, type: 2}

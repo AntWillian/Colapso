@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 668c8ced12e26174b8ff47e364ea435c, type: 3}
-  m_Name: "Introdu\xE7\xE3o 4"
+  m_Name: VaidadeInt 1
   m_EditorClassIdentifier: 
   dialogue:
-  - Claro!!!
-  - "... na verdade... nao sei se voc\xEA conseguira chegar at\xE9 l\xE1..."
+  - Que estranho...
+  - "Com a falta de ilumina\xE7ao nao deveria ser possivel chegar ate essa ilha abandonada."
+  - De onde voce surgiu?
   responses:
-  - responseText: Por que?
-    dialogueObject: {fileID: 11400000, guid: a300af31afcda474593a6cce0b332c96, type: 2}
+  - responseText: Eu.. nao sei, apenas acordei e ja estava nessa ilha
+    dialogueObject: {fileID: 11400000, guid: 9c108ccd174c094448fb500b72c6ef38, type: 2}

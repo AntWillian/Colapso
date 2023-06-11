@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 668c8ced12e26174b8ff47e364ea435c, type: 3}
-  m_Name: "Introdu\xE7\xE3o 4"
+  m_Name: VaidadeInt 6
   m_EditorClassIdentifier: 
   dialogue:
-  - Claro!!!
-  - "... na verdade... nao sei se voc\xEA conseguira chegar at\xE9 l\xE1..."
+  - "A escola est\xE1 logo ali em cima."
+  - Te darei uma lanterna para que possa se orientar la dentro.
+  - "Tome cuidado, quando terminar, v\xE1 para o farol que esta depois desta ponte"
   responses:
-  - responseText: Por que?
-    dialogueObject: {fileID: 11400000, guid: a300af31afcda474593a6cce0b332c96, type: 2}
+  - responseText: O-ok.
+    dialogueObject: {fileID: 11400000, guid: c3744f70a7afaaf4fbccf4b1648e6217, type: 2}

@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 668c8ced12e26174b8ff47e364ea435c, type: 3}
-  m_Name: "Introdu\xE7\xE3o 4"
+  m_Name: VaidadeInt 2
   m_EditorClassIdentifier: 
   dialogue:
-  - Claro!!!
-  - "... na verdade... nao sei se voc\xEA conseguira chegar at\xE9 l\xE1..."
+  - Acordou nesta ilha? estranho...
+  - De qualquer forma como posso ajuda-la?
   responses:
-  - responseText: Por que?
-    dialogueObject: {fileID: 11400000, guid: a300af31afcda474593a6cce0b332c96, type: 2}
+  - responseText: Preciso encontrar uma forma de chegar ate a ilha do norte.
+    dialogueObject: {fileID: 11400000, guid: 5e8ee11f13510394781359dc37e389f9, type: 2}

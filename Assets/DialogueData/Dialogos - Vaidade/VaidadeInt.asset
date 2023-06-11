@@ -10,11 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 668c8ced12e26174b8ff47e364ea435c, type: 3}
-  m_Name: "Introdu\xE7\xE3o 4"
+  m_Name: VaidadeInt
   m_EditorClassIdentifier: 
   dialogue:
-  - Claro!!!
-  - "... na verdade... nao sei se voc\xEA conseguira chegar at\xE9 l\xE1..."
+  - Ah, ola.
   responses:
-  - responseText: Por que?
-    dialogueObject: {fileID: 11400000, guid: a300af31afcda474593a6cce0b332c96, type: 2}
+  - responseText: Oi
+    dialogueObject: {fileID: 11400000, guid: 7ead6e5b83090bd49820e8c964e5e792, type: 2}
