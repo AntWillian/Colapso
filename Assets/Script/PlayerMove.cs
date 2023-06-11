@@ -23,6 +23,8 @@ public class PlayerMove : MonoBehaviour
 
     private SpawnManager salaSpawm;
 
+    
+
     // Update is called once per frame
     void Update()
     {

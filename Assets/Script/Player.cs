@@ -24,7 +24,9 @@ public class Player : MonoBehaviour
 
     public bool chave;
 
-
+    public AudioClip sfxDano;
+    public AudioClip sfxPulo;
+    public AudioController audioController;
 
 
     void Start(){
@@ -66,6 +68,7 @@ public class Player : MonoBehaviour
         if(Input.GetButtonDown("Jump") ){
 
             if( !isJumping){
+                audioController.ToqueSFX(sfxPulo);
                 rig.AddForce(new Vector2(0.5f, JumpForce), ForceMode2D.Impulse);
                 anim.SetBool("jump", true);
                 isJumping = true;
@@ -114,13 +117,15 @@ public class Player : MonoBehaviour
         }else if(collision.CompareTag("CheckPoint")){
             respawnPoint = transform.position;
         }else if(collision.CompareTag("InimigoPeixe")){
+            gameObject.transform.position = new Vector2( gameObject.transform.position.x-.3f,gameObject.transform.position.y+.4f);
+            audioController.ToqueSFX(sfxDano);
             sanidadePlataforma--;
         }else if(collision.CompareTag("Key")){
-             //coletandoPilha.animText = true;
+            //coletandoPilha.animText = true;
             Destroy(collision.gameObject);
             chave = true;
         }else if(collision.CompareTag("Porta")){
-             //coletandoPilha.animText = true;
+            //coletandoPilha.animText = true;
             if(chave){
                 chave = false;
                 GameController.instance.nextFaseFarol("FaseFarolLevel2");
@@ -152,7 +157,7 @@ public class Player : MonoBehaviour
 
 
         if( collision.gameObject.tag == "SaidaPonte"){
-            Debug.Log("AUQUQUQUUQUQ");
+            //Debug.Log("AUQUQUQUUQUQ");
            //  PlayerPrefs.DeleteKey("FasePonte");
            GameController.instance.salvaFasePonte();
            SceneManager.LoadScene("MapaPrincipal1");    

@@ -161,7 +161,7 @@ MonoBehaviour:
   moveSpeed: 2
   platform1: 0
   platform2: 0
-  timerMovePlatform: 1
+  timerMovePlatform: 3
   moveRight: 1
   moveUp: 1
 --- !u!1 &7040153019405575570

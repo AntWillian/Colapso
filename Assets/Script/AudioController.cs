@@ -6,6 +6,8 @@ public class AudioController : MonoBehaviour
 {
 
     public AudioSource audioMusicaDeFundo;
+
+    public AudioSource audioSourceSFX;
     public AudioClip[] musicas;
 
     // Start is called before the first frame update
@@ -17,9 +19,10 @@ public class AudioController : MonoBehaviour
         audioMusicaDeFundo.Play();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public void ToqueSFX(AudioClip clip){
+
+        audioSourceSFX.PlayOneShot(clip);
+        audioSourceSFX.clip = clip;
+        audioSourceSFX.Play();
     }
 }

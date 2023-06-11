@@ -149,3 +149,5 @@ MonoBehaviour:
   speed: 2
   particulaSanidade: {fileID: 4791774224040852071, guid: c8814a4fa2c2b8f40ada80bc81a45d7e, type: 3}
   bateria: {fileID: 5415213563375306768, guid: 8d38e318ca684314e820cf77503bab71, type: 3}
+  sfxDano: {fileID: 8300000, guid: 0bb842ac33fcd5749b02d17b6eb2e5e3, type: 3}
+  audioController: {fileID: 6712682351373994344, guid: 3dff34b6ec2e3674d9e4e9f8477a1d79, type: 3}
