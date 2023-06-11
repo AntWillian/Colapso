@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: IntTedio 5
   m_EditorClassIdentifier: 
   dialogue:
-  - A escola esta na ponta esqueda da ilha.
+  - A escola esta na ponta esquerda da ilha.
   - Se voce seguir por aquele lado, voce deve conseguir encontra-la por perto
   responses:
   - responseText: Entendi, obrigada!

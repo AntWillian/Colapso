@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
   - Claro!!!
-  - "... na verdade... nao sei se voc\xEA conseguira chegar at\xE9 l\xE1..."
+  - "... na verdade... nao sei se voce conseguira chegar at\xE9 l\xE1..."
   responses:
   - responseText: Por que?
     dialogueObject: {fileID: 11400000, guid: a300af31afcda474593a6cce0b332c96, type: 2}
