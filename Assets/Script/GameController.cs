@@ -10,6 +10,8 @@ public class GameController : MonoBehaviour
 
     public GameObject showStartGame;
 
+    public GameObject telaFim;
+
     public static GameController instance;
 
     ///// VARIAVEL QUE VERIFICA SE O GAME FOI STARTADO
@@ -33,6 +35,10 @@ public class GameController : MonoBehaviour
         instance = this;
     }
 
+    public void TelaFim()
+    {
+        telaFim.SetActive(true);
+    }
 
     public void ShowGameOver(){
         gameOver.SetActive(true);

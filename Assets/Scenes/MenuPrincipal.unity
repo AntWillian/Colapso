@@ -1475,7 +1475,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Very Low
+  m_text: Ultra
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c56505ffd50631f45a1b3c53a15b71e8, type: 2}
   m_sharedMaterial: {fileID: 5403679175712257422, guid: c56505ffd50631f45a1b3c53a15b71e8, type: 2}
@@ -5113,7 +5113,7 @@ MonoBehaviour:
   m_Placeholder: {fileID: 0}
   m_ItemText: {fileID: 930937729}
   m_ItemImage: {fileID: 0}
-  m_Value: 0
+  m_Value: 5
   m_Options:
     m_Options:
     - m_Text: Very Low

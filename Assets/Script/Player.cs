@@ -18,10 +18,13 @@ public class Player : MonoBehaviour
 
     private Vector3 respawnPoint;
     public GameObject falldetector;
+    public GameObject fim;
 
     public int sanidadePlataforma;
 
     public bool chave;
+
+
 
 
     void Start(){
@@ -129,12 +132,15 @@ public class Player : MonoBehaviour
                 chave = false;
                 GameController.instance.nextFaseFarol("FaseFarolLevel3");
             }
-            
-        }else if(collision.CompareTag("Porta3")){
-             //coletandoPilha.animText = true;
-            if(chave){
+        }
+
+        else if (collision.CompareTag("Porta3")){
+            //fim = GameObject.FindGameObjectsWithTag("Fim");
+
+            //coletandoPilha.animText = true;
+            if (chave){
                 chave = false;
-                GameController.instance.nextFaseFarol("FinalLevel");
+                GameController.instance.TelaFim();
             }
             
         }

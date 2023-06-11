@@ -48,6 +48,7 @@ TagManager:
   - EntradaPonte
   - SaidaPonte
   - EntradaFarol
+  - Fim
   layers:
   - Default
   - TransparentFX
