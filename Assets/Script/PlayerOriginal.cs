@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class PlayerOriginal : MonoBehaviour
@@ -10,13 +11,17 @@ public class PlayerOriginal : MonoBehaviour
 
     public IInteractable Interactable { get; set; }
 
-    [SerializeField] float moveSpeed;
     // Vector2 moveInput;
     public Animator anim;
     public float speed;
 
-    public int pilhas;
-    public int vidas;
+    SavePlayerPos playerPosData;
+
+    private void Awake()
+    {
+        playerPosData = FindObjectOfType<SavePlayerPos>();
+        playerPosData.PlayerPosLoad();
+    }
 
     // Update is called once per frame
     void Update()
@@ -38,6 +43,52 @@ public class PlayerOriginal : MonoBehaviour
             Interactable?.Interact(this);
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if( collision.gameObject.tag == "EntradaEscola"){
+
+            if (PlayerPrefs.GetInt("FaseEscola") == 0){
+                playerPosData = FindObjectOfType<SavePlayerPos>();
+                playerPosData.PlayerPosSave();
+
+                SceneManager.LoadScene("faseSchool");    
+            }else{
+                Debug.Log("Fase Completa");
+            }
+            
+        } 
+
+        if( collision.gameObject.tag == "EntradaPonte"){
+         
+            if (PlayerPrefs.GetInt("FaseEscola") == 1){
+                playerPosData = FindObjectOfType<SavePlayerPos>();
+                playerPosData.PlayerPosSave();
+
+                SceneManager.LoadScene("FasePonte");    
+            }else{
+                Debug.Log("Fase Completa PONTE");
+            }
+            
+        } 
+
+        if( collision.gameObject.tag == "EntradaFarol"){
+         
+            if (PlayerPrefs.GetInt("FasePonte") == 1){
+                playerPosData = FindObjectOfType<SavePlayerPos>();
+                playerPosData.PlayerPosSave();
+
+                SceneManager.LoadScene("FaseFarolLevel1");    
+            }else{
+                Debug.Log("Fase Completa Farol");
+            }
+            
+        } 
+
+
+        
+    }
+    
 
     
 }

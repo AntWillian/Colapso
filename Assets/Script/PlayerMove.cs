@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
@@ -54,7 +55,11 @@ public class PlayerMove : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision){
-        // controle para destaivar spawns de inimigos em uma sala e ativar na outra
+
+        if( collision.gameObject.tag == "SaidaEscola"){
+            GameController.instance.salvaFaseEscola();
+            SceneManager.LoadScene("MapaPrincipal1");    
+        } 
 
         // SALA 0 e saida das salas
        if(collision.gameObject.tag == "SalaExit"){         

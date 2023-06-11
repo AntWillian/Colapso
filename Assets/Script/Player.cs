@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
+
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -141,6 +143,16 @@ public class Player : MonoBehaviour
             GameController.instance.ShowGameOver();
             Destroy(gameObject);
         }
+
+
+        if( collision.gameObject.tag == "SaidaPonte"){
+            Debug.Log("AUQUQUQUUQUQ");
+           //  PlayerPrefs.DeleteKey("FasePonte");
+           GameController.instance.salvaFasePonte();
+           SceneManager.LoadScene("MapaPrincipal1");    
+        } 
+
+        
 
     }
 
