@@ -10,10 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 668c8ced12e26174b8ff47e364ea435c, type: 3}
-  m_Name: IntroducaoAleg
+  m_Name: IntroducaoAleg 5
   m_EditorClassIdentifier: 
   dialogue:
-  - Ah, Ola!!
+  - Nao tive coragem para entrar no farol...
+  - Sinto que assim como essas sombras e barulhos.
+  - Existe algo la dentro, algo grande e, assustador...
   responses:
-  - responseText: ola?...
-    dialogueObject: {fileID: 11400000, guid: c8d7c9ea0d8c99c4999f9138117ae86f, type: 2}
+  - responseText: ...
+    dialogueObject: {fileID: 11400000, guid: d15e5ca33d7781e4bb0119447581410d, type: 2}

@@ -10547,7 +10547,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueObject: {fileID: 11400000, guid: 23aff10c27b8739498adf8ea395236df, type: 2}
-  events: []
+  events:
+  - name: ola?...
+    onPickedResponse:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 108057632}
+          m_TargetAssemblyTypeName: DialogueActivator, Assembly-CSharp
+          m_MethodName: UpdateDialogueObject
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 11400000, guid: ef7c6dc40e3f4df40995399315c26af1, type: 2}
+            m_ObjectArgumentAssemblyTypeName: DialogueObject, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &108057632
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11442,7 +11458,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 3, y: 34}
+  m_AnchoredPosition: {x: 7, y: 94}
   m_SizeDelta: {x: -225.9202, y: -215.947}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &534595495
@@ -11473,7 +11489,10 @@ MonoBehaviour:
     se aproximar de um NPC, pressione "F" para interagir.
 
     -Em certos momentos
-    do dialogo, acima da caixa de texto sera exibido opcoes de escolha.
+    do dialogo, acima da caixa de texto sera exibido opcoes de escolha, utilize o
+    click do mouse para confirmar a opcao.
+
+    -Aperte "SPACE" para avancar no dialogo.
 
     -Pressione
     o ''Start'' para comecar.'
@@ -56168,7 +56187,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1894524634
 MonoBehaviour:
   m_ObjectHideFlags: 0

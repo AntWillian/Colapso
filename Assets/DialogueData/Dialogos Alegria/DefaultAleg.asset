@@ -12,5 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 668c8ced12e26174b8ff47e364ea435c, type: 3}
   m_Name: DefaultAleg
   m_EditorClassIdentifier: 
-  dialogue: []
+  dialogue:
+  - Eu nao suporto mais ficar nesse lugar...
+  - Eu so quero descansar...
+  - Quem fez o level desginer dessa ilha?
   responses: []
