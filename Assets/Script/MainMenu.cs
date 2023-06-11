@@ -8,8 +8,17 @@ public class MainMenu : MonoBehaviour
     
     public void MenuPlayGame()
     {
+        // deleta variaveis globais
+        PlayerPrefs.DeleteKey("p_x");
+        PlayerPrefs.DeleteKey("p_y");
+        PlayerPrefs.DeleteKey("TimeToLoad");
+        PlayerPrefs.DeleteKey("Saved");
+        PlayerPrefs.DeleteKey("FaseEscola");
+        PlayerPrefs.DeleteKey("FasePonte");
+
+
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        Debug.Log("Vai começar");
+        Debug.Log("Vai comeï¿½ar");
     }
 
     public void MenuQuitGame()

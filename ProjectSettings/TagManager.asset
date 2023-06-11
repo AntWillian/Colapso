@@ -43,6 +43,11 @@ TagManager:
   - brickYellow
   - Porta3
   - Porta2
+  - EntradaEscola
+  - SaidaEscola
+  - EntradaPonte
+  - SaidaPonte
+  - EntradaFarol
   layers:
   - Default
   - TransparentFX

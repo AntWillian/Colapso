@@ -21,6 +21,9 @@ public class GameController : MonoBehaviour
     ///// VARIAVEL QUE verifica quantas vezes o player pode reniciar a fase
     public int reniciarGameVidas = 11;
 
+    // verifica se a fase da escola foi completa
+    public bool faseEscola = false;
+
     // ativa todos os spawner de inimigos
     //public bool ativarAllSpawn = false;
 
@@ -30,11 +33,6 @@ public class GameController : MonoBehaviour
         instance = this;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void ShowGameOver(){
         gameOver.SetActive(true);
@@ -59,6 +57,16 @@ public class GameController : MonoBehaviour
         //SceneManager.LoadScene(lvlName);
        // Debug.Log("RERERERERERERREREERREREER");
         showStartGame.SetActive(false);
+    }
+
+    public void salvaFaseEscola(){
+        PlayerPrefs.SetInt("FaseEscola", 1);
+        PlayerPrefs.Save();
+    }
+
+    public void salvaFasePonte(){
+        PlayerPrefs.SetInt("FasePonte", 1);
+        PlayerPrefs.Save();
     }
 
 }
