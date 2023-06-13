@@ -23,7 +23,7 @@ public class PlayerMove : MonoBehaviour
 
     private SpawnManager salaSpawm;
 
-    
+    public SpriteRenderer m_SpriteRenderer;
 
     // Update is called once per frame
     void Update()
@@ -35,6 +35,13 @@ public class PlayerMove : MonoBehaviour
 
 
         Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"),0f);
+
+        //Fetch the SpriteRenderer from the GameObject
+        m_SpriteRenderer = GetComponent<SpriteRenderer>();
+        //Set the GameObject's Color quickly to a set Color (blue)
+        
+
+        //sortingOrder 
         
         anim.SetFloat("Horizontal", movement.x);
         anim.SetFloat("Vertical", movement.y);
@@ -44,19 +51,35 @@ public class PlayerMove : MonoBehaviour
 
     }
 
-    void OnCollisionEnter2D(Collision2D collision){
+    void ManagerCollision(GameObject coll){
 
         // coletando as pilas
-        if(collision.gameObject.tag == "Pilha"){
+         if(coll.CompareTag("Pilha")){
 
             coletandoPilha.animText = true;
-            Destroy(collision.gameObject);
+            Destroy(coll);
             pilhas++;
-        }      
+        }   
+
+
+        if(coll.CompareTag("IverterDown")){
+            m_SpriteRenderer.sortingOrder =3;
+        }
+
+        if(coll.CompareTag("InverterUp")){
+            m_SpriteRenderer.sortingOrder =5;
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D collision){
+
+        ManagerCollision(collision.gameObject);     
 
     }
 
     private void OnTriggerEnter2D(Collider2D collision){
+
+        ManagerCollision(collision.gameObject); 
 
         if( collision.gameObject.tag == "SaidaEscola"){
             GameController.instance.salvaFaseEscola();

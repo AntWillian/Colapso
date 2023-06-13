@@ -18,7 +18,7 @@ public class Enemy : MonoBehaviour
 
     bool isAlive = true;
 
-    public AudioClip sfxDano;
+    //public AudioClip sfxDano;
     public AudioController audioController;
 
     // variaveis de luz para detectar se o poder esta ativo
@@ -83,7 +83,7 @@ public class Enemy : MonoBehaviour
         if(collision.CompareTag("Player")){
             isAlive = false;
 
-            audioController.ToqueSFX(sfxDano);
+           // audioController.ToqueSFX(sfxDano);
             statusSanidade.atingidaPorInimigo = true;
             Debug.Log("colidiu com player inimigo");
             Destroy(gameObject, 0.1f);

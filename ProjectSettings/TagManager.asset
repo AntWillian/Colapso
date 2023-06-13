@@ -49,6 +49,8 @@ TagManager:
   - SaidaPonte
   - EntradaFarol
   - Fim
+  - InverterUp
+  - IverterDown
   layers:
   - Default
   - TransparentFX

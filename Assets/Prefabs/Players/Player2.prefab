@@ -76,7 +76,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 5
   m_Sprite: {fileID: 694312679, guid: 9b4b4a478f05a4a418a487ecaa8c0d7c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -121,10 +121,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f643704be1a22bc40b314e116d915826, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogueUI: {fileID: 0}
   anim: {fileID: 6850838232234482369}
   speed: 5
   pilhas: 0
   vidas: 0
+  m_SpriteRenderer: {fileID: 0}
 --- !u!61 &6850838232234482381
 BoxCollider2D:
   m_ObjectHideFlags: 0
