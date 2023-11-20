@@ -1,10 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
-
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class PlayerFaseRaiva : MonoBehaviour
 {
 
     public float Speed;
@@ -29,21 +28,19 @@ public class Player : MonoBehaviour
     public AudioController audioController;
 
     // variaveis para fase da Raiva
-    public int redbarQtd;
+    public int redbarQtd = 0;
+    public int yellowBarQtd = 0;
+    public int blueBarQtd = 0;
 
 
     void Start(){
         rig = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-
-        respawnPoint = transform.position;
     }
 
     void Update(){
         Move();
         Jump();
-
-
     }
 
     void Move(){
@@ -94,6 +91,9 @@ public class Player : MonoBehaviour
             collision.gameObject.tag == "platform" ){
                 gameObject.transform.parent = collision.transform;
         }
+
+
+        
     }
 
     void OnCollisionExit2D(Collision2D collision){
@@ -112,61 +112,15 @@ public class Player : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision){
-        if(collision.CompareTag("LinhaFinal")){
-            Debug.Log("colidiu com a linha final");  
-
-            sanidadePlataforma--;
-            transform.position = respawnPoint;
-        }else if(collision.CompareTag("CheckPoint")){
-            respawnPoint = transform.position;
-        }else if(collision.CompareTag("InimigoPeixe")){
-            gameObject.transform.position = new Vector2( gameObject.transform.position.x-.3f,gameObject.transform.position.y+.4f);
-            audioController.ToqueSFX(sfxDano);
-            sanidadePlataforma--;
-        }else if(collision.CompareTag("Key")){
-            //coletandoPilha.animText = true;
-            Destroy(collision.gameObject);
-            chave = true;
-        }else if(collision.CompareTag("Porta")){
-            //coletandoPilha.animText = true;
-            if(chave){
-                chave = false;
-                GameController.instance.nextFaseFarol("FaseFarolLevel2");
-            }
-            
-        }else if(collision.CompareTag("Porta2")){
-             //coletandoPilha.animText = true;
-            if(chave){
-                chave = false;
-                GameController.instance.nextFaseFarol("FaseFarolLevel3");
-            }
-        }
-
-        else if (collision.CompareTag("Porta3")){
-            //fim = GameObject.FindGameObjectsWithTag("Fim");
-
-            //coletandoPilha.animText = true;
-            if (chave){
-                chave = false;
-                GameController.instance.TelaFim();
-            }
-            
-        }
-
-        if(sanidadePlataforma == 0){
-            GameController.instance.ShowGameOver();
-            Destroy(gameObject);
-        }
-
-
-        if( collision.gameObject.tag == "SaidaPonte"){
-            //Debug.Log("AUQUQUQUUQUQ");
-           //  PlayerPrefs.DeleteKey("FasePonte");
-           GameController.instance.salvaFasePonte();
-           SceneManager.LoadScene("MapaPrincipal1");    
-        } 
-
-        
+    
+        // coletando as pilas
+        if(collision.CompareTag("orbRed") ){
+            redbarQtd++;
+        }else if(collision.CompareTag("orbYellow") ){
+            yellowBarQtd++;
+        }else if(collision.CompareTag("orbBlue") ){
+            blueBarQtd++;
+        }    
 
     }
 

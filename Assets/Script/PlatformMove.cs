@@ -33,14 +33,14 @@ public class PlatformMove : MonoBehaviour
        
             if(timerMove <= timerMovePlatform && moveRight){
                 moveRight = true;
-                timerMove = timerMove + Time.deltaTime;
+                timerMove += Time.deltaTime;
 
               //  Debug.Log( "true dddd timerMove=" + timerMove);
             }else{
 
                 if(timerMove >= 0){
                     moveRight = false;
-                    timerMove = timerMove - Time.deltaTime;
+                    timerMove -= Time.deltaTime;
                    // Debug.Log( "False timerMove=" + timerMove);
                 }else{
                     timerMove = 0;
