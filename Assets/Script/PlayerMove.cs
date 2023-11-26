@@ -23,6 +23,17 @@ public class PlayerMove : MonoBehaviour
 
     private SpawnManager salaSpawm;
 
+    public AudioClip footstepSound; // Som de passos
+    private AudioSource audioSource;
+
+    void Start()
+    {
+
+        audioSource = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioSource>();
+
+        //audioSource = GetComponent<AudioSource>();
+    }
+
     
 
     // Update is called once per frame
@@ -42,6 +53,21 @@ public class PlayerMove : MonoBehaviour
 
         transform.position = transform.position + movement * speed * Time.deltaTime;
 
+        // Verifica se o jogador está se movendo e toca o som de passos
+        if (movement.magnitude > 0)
+        {
+            Debug.Log( " Sala rwrwerwerwerwer");
+            PlayFootstepSound();
+        }
+
+    }
+
+    void PlayFootstepSound()
+    {
+        if (!audioSource.isPlaying)
+        {
+            audioSource.PlayOneShot(footstepSound);
+        }
     }
 
     void OnCollisionEnter2D(Collision2D collision){

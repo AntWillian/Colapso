@@ -148,7 +148,8 @@ public class Player : MonoBehaviour
             //coletandoPilha.animText = true;
             if (chave){
                 chave = false;
-                GameController.instance.TelaFim();
+                GameController.instance.nextFaseFarol("fase2Raiva");
+                //GameController.instance.TelaFim();
             }
             
         }

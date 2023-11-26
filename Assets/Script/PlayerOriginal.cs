@@ -17,6 +17,17 @@ public class PlayerOriginal : MonoBehaviour
 
     SavePlayerPos playerPosData;
 
+    public AudioClip footstepSound; // Som de passos
+    private AudioSource audioSource;
+
+    void Start()
+    {
+
+        audioSource = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioSource>();
+
+        //audioSource = GetComponent<AudioSource>();
+    }
+
     private void Awake()
     {
         playerPosData = FindObjectOfType<SavePlayerPos>();
@@ -38,9 +49,25 @@ public class PlayerOriginal : MonoBehaviour
 
         transform.position = transform.position + movement * speed * Time.deltaTime;
 
+         // Verifica se o jogador está se movendo e toca o som de passos
+        if (movement.magnitude > 0)
+        {
+            Debug.Log( " Sala 000000fbdgdg00");
+            PlayFootstepSound();
+        }
+
         if (Input.GetKeyDown(KeyCode.F))
         {
             Interactable?.Interact(this);
+        }
+    }
+
+    
+    void PlayFootstepSound()
+    {
+        if (!audioSource.isPlaying)
+        {
+            audioSource.PlayOneShot(footstepSound);
         }
     }
 

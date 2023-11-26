@@ -29,6 +29,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Farol/FaseFarolLevel3.unity
     guid: db571041971c0b348b55d15e5584682a
+  - enabled: 1
+    path: Assets/Scenes/fase2Raiva.unity
+    guid: 1df59125c19ce034cab05ac6a4449a55
   - enabled: 0
     path: Assets/Scenes/Farol/FaseFarolLevel4.unity
     guid: 8c38a8ed0588dbb4cbaee5ba599cf9b0
