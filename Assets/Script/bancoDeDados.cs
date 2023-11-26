@@ -6,13 +6,20 @@ using UnityEngine;
 
 public class bancoDeDados : MonoBehaviour
 {
-       private string connectionString;
+    private string connectionString;
+
+    private PlayerFaseRaiva player;
 
     void Start()
     {
+
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerFaseRaiva>();
+
         // Defina o caminho para o banco de dados SQLite (pode ser na pasta Assets do Unity)
-        string dbName = "example.db";
+        string dbName = "players.db";
         string dbPath = "URI=file:" + Application.dataPath + "/" + dbName;
+
+       // Debug.Log(dbPath);
 
         // Crie a string de conexão
         connectionString = dbPath;
@@ -30,7 +37,7 @@ public class bancoDeDados : MonoBehaviour
             using (IDbCommand dbCmd = dbConnection.CreateCommand())
             {
                 // Crie a tabela de jogador com alguns campos simples (ID, Nome, Pontuação)
-                string sqlQuery = "CREATE TABLE IF NOT EXISTS PlayerTable (ID INTEGER PRIMARY KEY, Name TEXT, Score INTEGER)";
+                string sqlQuery = "CREATE TABLE IF NOT EXISTS PlayerTable (ID INTEGER PRIMARY KEY, Name TEXT, Score INTEGER, Vel INTEGER)";
                 dbCmd.CommandText = sqlQuery;
                 dbCmd.ExecuteScalar();
             }
@@ -39,8 +46,9 @@ public class bancoDeDados : MonoBehaviour
         }
     }
 
+
     // Exemplo de como inserir dados na tabela
-    void InsertPlayerData(string playerName, int playerScore)
+    void InsertPlayerData(string playerName, int playerScore, int playerVelo)
     {
         using (IDbConnection dbConnection = new SqliteConnection(connectionString))
         {
@@ -49,7 +57,7 @@ public class bancoDeDados : MonoBehaviour
             using (IDbCommand dbCmd = dbConnection.CreateCommand())
             {
                 // Insira dados na tabela de jogador
-                string sqlQuery = "INSERT INTO PlayerTable (Name, Score) VALUES ('" + playerName + "', " + playerScore + ")";
+                string sqlQuery = "INSERT INTO PlayerTable (Name, Score, Vel) VALUES ('" + playerName + "', " + playerScore + ", " + playerVelo + ")";
                 dbCmd.CommandText = sqlQuery;
                 dbCmd.ExecuteScalar();
             }
@@ -78,8 +86,14 @@ public class bancoDeDados : MonoBehaviour
                         int id = reader.GetInt32(0);
                         string name = reader.GetString(1);
                         int score = reader.GetInt32(2);
+                        int velo = reader.GetInt32(3);
 
-                        Debug.Log("ID: " + id + ", Name: " + name + ", Score: " + score);
+                        if (name == "Jogador3")
+                        {
+                            player.Speed =  velo;
+                        }
+
+                        Debug.Log("ID: " + id + ", Name: " + name + ", Score: " + score + ", Score: " + velo);
                     }
                 }
             }
@@ -93,7 +107,7 @@ public class bancoDeDados : MonoBehaviour
         // Exemplo: Chame a função InsertPlayerData ao pressionar a tecla 'I'
         if (Input.GetKeyDown(KeyCode.I))
         {
-            InsertPlayerData("Jogador1", 100);
+            InsertPlayerData("Jogador3", 200, 15);
         }
 
         // Exemplo: Chame a função ReadPlayerData ao pressionar a tecla 'R'
